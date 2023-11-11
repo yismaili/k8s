@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: hellok8s-deployment
 spec:
-  replicas: 2
+  replicas: 9
   selector:
     matchLabels:
       app: hellok8s
