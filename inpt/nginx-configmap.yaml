@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configmap
+data:
+  NGINX_SERVER_NAME: "localhost"
+  NGINX_SSL_CERT: |-
+    -----BEGIN CERTIFICATE-----
+    /etc/ssl/certs/nginx.crt
+    -----END CERTIFICATE-----
+  NGINX_SSL_KEY: |-
+    -----BEGIN PRIVATE KEY-----
+    /etc/ssl/private/nginx.key
+    -----END PRIVATE KEY-----
+

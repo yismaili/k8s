@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: localhost:5000/nginx:v1
+        # volumeMounts:
+        # - name: wordpress-data
+        #   mountPath: /Users/yismaili/Desktop/k8s/Inception/volume
+        ports:
+        - containerPort: 443
+        envFrom:
+        - configMapRef:
+            name: nginx-configmap
+      volumes:
+      - name: wordpress-data
+        persistentVolumeClaim:
+          claimName: px-sharedv4-pvc
+          
