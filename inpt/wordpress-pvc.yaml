@@ -1,12 +1,11 @@
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
   name: px-sharedv4-pvc
-  annotations:
-    volume.beta.kubernetes.io/storage-class: portworx-rwx-rep2
 spec:
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 10Gi  # Set the desired storage capacity
+  storageClassName: portworx-rwx-rep2  # Reference the StorageClass name
