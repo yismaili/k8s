@@ -15,16 +15,16 @@ spec:
       containers:
       - name: nginx
         image: localhost:5000/nginx:v1
-        # volumeMounts:
-        # - name: wordpress-data
-        #   mountPath: /Users/yismaili/Desktop/k8s/Inception/volume
+        volumeMounts:
+        - name: nginx-persistent-storage
+          mountPath: /var/www/html
         ports:
-        - containerPort: 443
+        - containerPort: 80
         envFrom:
         - configMapRef:
             name: nginx-configmap
       volumes:
-      - name: wordpress-data
+      - name: nginx-persistent-storage
         persistentVolumeClaim:
-          claimName: px-sharedv4-pvc
+          claimName: wordpress-pvc
           

@@ -18,11 +18,11 @@
 	# install WordPress using the specified options
 	wp core install --allow-root --url=$URL --title=$TITLE --admin_user=$ADMIN_USER --admin_password=$WORDPRESS_DB_PASSWORD --admin_email=$ADMIN_EMAIL
 	wp user create --allow-root ${WORDPRESS_DB_USER} ${USER_EMAIL} --user_pass=${WORDPRESS_DB_PASSWORD}; # create a new user for your WordPress site
-    wp plugin install  --allow-root redis-cache --activate
-   	wp redis  --allow-root enable
-	wp config set WP_REDIS_HOST ${REDIS_HOST} --allow-root
-	wp config set WP_REDIS_PORT ${REDIS_PORT} --allow-root
-	wp config set WP_CACHE ${REDIS_CACHE} --allow-root
+    # wp plugin install  --allow-root redis-cache --activate
+   	# wp redis  --allow-root enable
+	# wp config set WP_REDIS_HOST ${REDIS_HOST} --allow-root
+	# wp config set WP_REDIS_PORT ${REDIS_PORT} --allow-root
+	# wp config set WP_CACHE ${REDIS_CACHE} --allow-root
 	echo "Installation successful !"
  fi
 exec "$@"

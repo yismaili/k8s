@@ -4,9 +4,8 @@ metadata:
   name: local-pv
 spec:
   capacity:
-    storage: 1Gi
+    storage: 5Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/Users/yismaili/Desktop/k8s/Inception/volume"
-
+    path: "/Users/yismaili/Desktop/k8s/requirements/volume"

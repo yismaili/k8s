@@ -15,15 +15,15 @@ spec:
       containers:
       - name: wordpress
         image: localhost:5000/wp:v1
-        # volumeMounts:
-        # - name: wordpress-data
-        #   mountPath: /Users/yismaili/Desktop/k8s/Inception/volume
+        volumeMounts:
+        - name: wordpress-persistent-storage
+          mountPath: /var/www/html
         ports:
         - containerPort: 9000
         envFrom:
         - configMapRef:
             name: wordpress-configmap
       volumes:
-      - name: wordpress-data
+      - name: wordpress-persistent-storage
         persistentVolumeClaim:
-          claimName: px-sharedv4-pvc
+          claimName: wordpress-pvc

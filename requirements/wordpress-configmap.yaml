@@ -7,4 +7,8 @@ data:
   WORDPRESS_DB_NAME: "db_1337"
   WORDPRESS_DB_USER: "yismaili"
   WORDPRESS_DB_PASSWORD: "pass1337"
-
+  USER_EMAIL: "yismaili@gmail.com"
+  URL: 'wp.com'
+  TITLE: 'wp'
+  ADMIN_USER: "yismaili"
+  ADMIN_EMAIL: "yismaili@gmail.com"
