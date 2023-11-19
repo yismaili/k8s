@@ -22,6 +22,7 @@ delete: ## Delete MariaDB, WordPress, and Nginx
 	kubectl delete deploy --all
 	kubectl delete pvc --all
 	kubectl delete configmaps --all
+	kubectl delete pv --all
 	docker system prune -a
 	
 
