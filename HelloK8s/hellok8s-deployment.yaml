@@ -16,5 +16,5 @@ spec:
       - name: hellok8s-container
         image: localhost:5000/hellok8s:v1
         ports:
-        - containerPort: 80
+        - containerPort: 443
 
