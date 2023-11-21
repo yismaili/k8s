@@ -10,5 +10,5 @@ data:
   USER_EMAIL: "yismaili@gmail.com"
   URL: 'wp.com'
   TITLE: 'wp'
-  ADMIN_USER: "yismaili"
+  ADMIN_USER: "error"
   ADMIN_EMAIL: "yismaili@gmail.com"

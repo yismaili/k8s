@@ -24,4 +24,3 @@ spec:
       - name: mariadb-data
         persistentVolumeClaim:
           claimName: mariadb-pvc
-

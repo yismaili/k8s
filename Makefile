@@ -10,6 +10,10 @@ deploy: ## Deploy MariaDB, WordPress, and Nginx
 	docker push localhost:5000/wp:v1
 	docker build -t localhost:5000/nginx:v1 ./requirements/nginx
 	docker push localhost:5000/nginx:v1
+	docker build -t localhost:5000/redis:v1 ./requirements/redis
+	docker push localhost:5000/redis:v1
+	docker build -t localhost:5000/cadvisor:v1 ./requirements/cAdvisor
+	docker push localhost:5000/cadvisor:v1
 	kubectl apply -f ./requirements
 
 .PHONY: upgrade
