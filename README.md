@@ -32,5 +32,16 @@ Key features of Kubernetes include:
    - Node Controller: The node controller is a Kubernetes master component which manages various aspects of nodes.
    - Scheduler: is identify the right node to place a container on based resource limitations or guarantees, taints, tolerations and affinity/anti-affinity roles.
    - etcd cluster: etcd is a critical part of the Kubernetes. etcd database that stores the state of the cluster, including node and workload information in a key/value format.
+   - DNS: all Kubernetes clusters should have cluster DNS to resolve name of the containers inside master node as all the above components is containers inside master node
+   - Web UI: web-based UI for Kubernetes clusters. It allows users to manage and troubleshoot applications running in the cluster, as well as the cluster itself
+   - Container runtime: The container runtime is the software that is responsible for running containers.
+# Node (worker) components
+
+   - kubelet: the main service on a node, connect between Master and Node and ensuring that pods and their containers are healthy and running in the desired state. This component also reports to the master on the health of the host where it is running.
+   - kube-proxy - a proxy service that runs on each worker node to deal with individual host subnetting and expose services to the external world. It performs request forwarding to the correct pods/containers across the various isolated networks in a cluster.
+# Kubectl
+
+kubectl command is a line tool that interacts with kube-apiserver and send commands to the master node. Each command is converted into an API call.
+
 
     
