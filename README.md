@@ -22,4 +22,15 @@ Key features of Kubernetes include:
    - Worker Node:
     the server that has host the applications as Pods and containers.
 
+   <img width="734" alt="Screen Shot 2023-11-21 at 5 28 44 PM" src="https://github.com/yismaili/k8s/assets/69278312/e0608a1e-dd05-42f5-919d-44ce4c049b29">
+
+ # Kubernetes Master Node Components
+
+   - API server: is the primary management components of kubernetes and is responsible for orchestrating all operations (scaling, updates, and so on) in the cluster.
+   - Controller-manager: The Controller Manager is the engine that runs the core control loops, create Pods, watches the state of the cluster, and makes changes to drive status toward the desired state.
+   - Replication-Controller: A ReplicationController ensures that a specified number of pod replicas are running at any one time. It makes sure that a pod is always up and available.
+   - Node Controller: The node controller is a Kubernetes master component which manages various aspects of nodes.
+   - Scheduler: is identify the right node to place a container on based resource limitations or guarantees, taints, tolerations and affinity/anti-affinity roles.
+   - etcd cluster: etcd is a critical part of the Kubernetes. etcd database that stores the state of the cluster, including node and workload information in a key/value format.
+
     
