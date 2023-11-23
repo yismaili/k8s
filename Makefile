@@ -4,17 +4,24 @@ registry:
 .PHONY: deploy
 
 deploy: ## Deploy MariaDB, WordPress, and Nginx
-	docker build -t localhost:5000/mariadb:v1 ./requirements/mariadb
+	docker build -t localhost:5000/mariadb:v1 ./mariadb
 	docker push localhost:5000/mariadb:v1
-	docker build -t localhost:5000/wp:v1 ./requirements/WordPress
+	docker build -t localhost:5000/wp:v1 ./WordPress
 	docker push localhost:5000/wp:v1
-	docker build -t localhost:5000/nginx:v1 ./requirements/nginx
+	docker build -t localhost:5000/nginx:v1 ./nginx
 	docker push localhost:5000/nginx:v1
-	docker build -t localhost:5000/redis:v1 ./requirements/redis
+	docker build -t localhost:5000/redis:v1 ./redis
 	docker push localhost:5000/redis:v1
-	docker build -t localhost:5000/cadvisor:v1 ./requirements/cAdvisor
+	docker build -t localhost:5000/cadvisor:v1 ./cAdvisor
 	docker push localhost:5000/cadvisor:v1
-	kubectl apply -f ./requirements
+	docker build -t localhost:5000/adminer:v1 ./Adminer
+	docker push localhost:5000/adminer:v1
+	docker build -t localhost:5000/website:v1 ./website
+	docker push localhost:5000/website:v1
+	kubectl apply -f ./
+	kubectl apply -f ./cAdvisor-load-balancer-service.yaml
+	kubectl apply -f ./adminer-loadBalancer.yaml
+	kubectl apply -f ./website-loadBalancer.yaml
 
 .PHONY: upgrade
 upgrade: ## Upgrade MariaDB, WordPress, and Nginx
