@@ -1,10 +1,10 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: mariadb-configmap
-data:
-  MYSQL_ROOT_PASSWORD: "pass1337"
-  MYSQL_DATABASE: "db_1337"
-  MYSQL_USER: "yismaili"
-  MYSQL_PASSWORD: "pass1337"
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: mariadb-configmap
+# data:
+#   MYSQL_ROOT_PASSWORD: "pass1337"
+#   MYSQL_DATABASE: "db_1337"
+#   MYSQL_USER: "yismaili"
+#   MYSQL_PASSWORD: "pass1337"
 

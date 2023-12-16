@@ -4,9 +4,9 @@ metadata:
   name: wordpress-configmap
 data:
   WORDPRESS_DB_HOST: "mariadb-service"
-  WORDPRESS_DB_NAME: "db_1337"
-  WORDPRESS_DB_USER: "yismaili"
-  WORDPRESS_DB_PASSWORD: "pass1337"
+  # WORDPRESS_DB_NAME: "db_1337"
+  # WORDPRESS_DB_USER: "yismaili"
+  # WORDPRESS_DB_PASSWORD: "pass1337"
   USER_EMAIL: "yismaili@gmail.com"
   URL: 'wp.com'
   TITLE: 'wp'

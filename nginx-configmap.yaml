@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: nginx-configmap
 data:
-  # NGINX_SERVER_NAME: "localhost"
+  NGINX_SERVER_NAME: "yismaili42.fr"
   NGINX_SSL_CERT: |-
     -----BEGIN CERTIFICATE-----
     /etc/ssl/certs/nginx.crt
